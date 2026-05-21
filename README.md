@@ -1,2 +1,1 @@
 # Video-Fusion
-Video generation
