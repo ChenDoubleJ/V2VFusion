@@ -1,21 +1,34 @@
 <div align="center">
 
-# V2VFusion: Text-Controlled Video-to-Video Diffusion for Degradation-Aware Video Fusion
+# **V2VFusion: Text-Controlled Video-to-Video Diffusion for Degradation-Aware Video Fusion**
+
+**A unified video-to-video fusion framework.**
+
+<p>
+  <img src="https://img.shields.io/badge/Conference-NeurIPS%202026-1f6feb" alt="Conference">
+  <img src="https://img.shields.io/badge/Python-3.10-3776ab" alt="Python">
+  <img src="https://img.shields.io/badge/Task-Video%20Fusion-6f42c1" alt="Task">
+  <img src="https://img.shields.io/badge/Code-Released-2ea44f" alt="Code">
+</p>
 
 </div>
 
-## Updates
+## **Updates**
 
 - **2026.09.30**  The code has been *released*!
 - **2026.09.25**  V2VFusion has been accepted by *NeurIPS* 2026!
 
-## Method Overview
+## **Method Overview**
 
-<img width="2218" height="831" alt="image" src="https://github.com/user-attachments/assets/34a81992-e9f5-4fde-aa6a-b91d8ff02ed5" />
+<p align="center">
+  <img width="2218" height="831" alt="Method overview" src="https://github.com/user-attachments/assets/34a81992-e9f5-4fde-aa6a-b91d8ff02ed5" />
+</p>
 
-<img width="2087" height="1054" alt="image" src="https://github.com/user-attachments/assets/1ff6af3a-81fd-4b6f-b0e8-6f0720fa05cd" />
+<p align="center">
+  <img width="2087" height="1054" alt="Qualitative results" src="https://github.com/user-attachments/assets/1ff6af3a-81fd-4b6f-b0e8-6f0720fa05cd" />
+</p>
 
-## Dependencies and Installation
+## **Dependencies and Installation**
 
 Clone this repository and create a conda environment:
 
@@ -40,9 +53,9 @@ sudo apt-get update
 sudo apt-get install ffmpeg libsm6 libxext6 -y
 ```
 
-## Inference
+## **Inference**
 
-### Step 1: Prepare Model Weights
+### **Step 1: Prepare Model Weights**
 
 Download the required checkpoints and place them under `pretrained_weight/`.
 
@@ -61,7 +74,7 @@ pretrained_weight/
 
 `model_weight/` is left as a placeholder for now. The download link will be added after the model weights are organized.
 
-### Step 2: Prepare Testing Data
+### **Step 2: Prepare Testing Data**
 
 Put testing videos and text prompts under `data/`. V2VFusion supports three testing tasks: visible-infrared fusion, multi-exposure fusion, and multi-focus fusion. Each task uses the same folder structure:
 
@@ -90,7 +103,7 @@ There are two ways to prepare text prompts:
 
 For simple degradation tests, such as manually adding synthetic degradations, *writing prompts manually is usually the most convenient choice*. Model-generated prompts may require careful tuning and can consume additional computational resources.
 
-### Step 3: Run Inference
+### **Step 3: Run Inference**
 
 Run the inference script:
 
