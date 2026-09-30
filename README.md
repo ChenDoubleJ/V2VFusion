@@ -1,3 +1,15 @@
+## Updates
+2026.09.30 The code has been released!
+
+2026.09.25 V2VFusion has been accepted by NeurIPS 2026! 
+
+
+
+## Method Overview
+<img width="2218" height="831" alt="image" src="https://github.com/user-attachments/assets/34a81992-e9f5-4fde-aa6a-b91d8ff02ed5" />
+
+<img width="2087" height="1054" alt="image" src="https://github.com/user-attachments/assets/1ff6af3a-81fd-4b6f-b0e8-6f0720fa05cd" />
+
 ## Dependencies and Installation
 
 ```bash
@@ -16,7 +28,3 @@ pip install -r requirements.txt
 sudo apt-get update
 sudo apt-get install ffmpeg libsm6 libxext6 -y
 ```
-## Method Overview
-<img width="2218" height="831" alt="image" src="https://github.com/user-attachments/assets/34a81992-e9f5-4fde-aa6a-b91d8ff02ed5" />
-
-<img width="2087" height="1054" alt="image" src="https://github.com/user-attachments/assets/1ff6af3a-81fd-4b6f-b0e8-6f0720fa05cd" />
