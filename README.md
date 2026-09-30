@@ -1,9 +1,13 @@
+<div align="center">
+
 # V2VFusion: Text-Controlled Video-to-Video Diffusion for Degradation-Aware Video Fusion
+
+</div>
 
 ## Updates
 
-- **2026.09.30** The code has been released!
-- **2026.09.25** V2VFusion has been accepted by NeurIPS 2026!
+- **2026.09.30**  The code has been *released*!
+- **2026.09.25**  V2VFusion has been accepted by *NeurIPS* 2026!
 
 ## Method Overview
 
