@@ -1,9 +1,9 @@
-# V2VFusion
+# V2VFusion: Text-Controlled Video-to-Video Diffusion for Degradation-Aware Video Fusion
 
 ## Updates
 
-- 2026.09.30 The code has been released!
-- 2026.09.25 V2VFusion has been accepted by NeurIPS 2026!
+- **2026.09.30** The code has been released!
+- **2026.09.25** V2VFusion has been accepted by NeurIPS 2026!
 
 ## Method Overview
 
@@ -84,7 +84,7 @@ There are two ways to prepare text prompts:
 1. Automatically generate prompts with a video-language model, such as [LLaVA-Video-7B-Qwen2](https://huggingface.co/lmms-lab/LLaVA-Video-7B-Qwen2), or another suitable VL model.
 2. Manually write prompts.
 
-For simple degradation tests, such as manually adding synthetic degradations, writing prompts manually is usually the most convenient choice. Model-generated prompts may require careful tuning and can consume additional computational resources.
+For simple degradation tests, such as manually adding synthetic degradations, *writing prompts manually is usually the most convenient choice*. Model-generated prompts may require careful tuning and can consume additional computational resources.
 
 ### Step 3: Run Inference
 
