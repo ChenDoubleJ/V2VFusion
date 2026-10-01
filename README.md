@@ -99,7 +99,7 @@ For each sample, put the paired videos in the corresponding `lq/` and `lq1/` fol
 There are two ways to prepare text prompts:
 
 1. Automatically generate prompts with a video-language model, such as [LLaVA-Video-7B-Qwen2](https://huggingface.co/lmms-lab/LLaVA-Video-7B-Qwen2), or another suitable VL model.
-2. Manually write prompts.
+2. Manually write prompts. *The visible video is degraded by..., the infrared video is degraded by ....*
 
 For simple degradation tests, such as manually adding synthetic degradations, *writing prompts manually is usually the most convenient choice*. Model-generated prompts may require careful tuning and can consume additional computational resources.
 
