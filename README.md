@@ -72,7 +72,7 @@ pretrained_weight/
 `-- CLIP-ViT-H-14-laion2B-s32B-b79K/
 ```
 
-`model_weight/` is left as a placeholder for now. The download link will be added after the model weights are organized.
+`model_weight/` is left as a placeholder for now. The download link will be added after the model weights are organized. (**The model weights are a bit large, and it will take some time to upload. We need to wait for a few days...**)
 
 ### **Step 2: Prepare Testing Data**
 
