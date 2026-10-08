@@ -724,7 +724,7 @@ class MoEBlock(nn.Module):
 
         deg_logits = self.deg_gate(h2)
 
-        # ★这里改掉★
+        
         deg_logits = deg_logits.masked_fill(hard_task_mask == 0, -1e4)
 #--------------------------
         topk_deg_val, topk_deg_idx = th.topk(
@@ -848,7 +848,7 @@ class MoEBlock(nn.Module):
 #             kernel_size=1
 #         )
 
-#         # 把 context (假设其最终特征维度是1024) 映射为 out_channels 维度 - 修改后的代码
+#         
 #         self.context_layers = nn.Sequential(
 #             nn.SiLU(),
 #             nn.Linear(1024, self.out_channels)
@@ -881,7 +881,7 @@ class MoEBlock(nn.Module):
 #         while len(emb_out.shape) < len(h.shape):
 #             emb_out = emb_out[..., None]
 
-#         # ---------- 把 context 弄到和 h 一样的维度 ----------
+#         # 
 #         if context is not None:
 #             B, C, H, W = h.shape
 #             context_flat = context.mean(dim=1)
@@ -904,14 +904,14 @@ class MoEBlock(nn.Module):
 #         task_mask = th.zeros_like(task_logits)
 #         task_mask.scatter_(1, topk_task_idx, 1.0)
 
-#         # 【修复1】使用 Straight-Through Estimator (STE) 技巧保留梯度
-#         # 这允许前向传播保持 0/1 的 mask，但反向传播时梯度可以流回 task_logits
+#         # 
+#        
 #         task_probs = th.sigmoid(task_logits) 
 #         task_mask = (task_mask - task_probs).detach() + task_probs 
 
-#         # ---------- Step2 Degradation Routing ----------
+#         
 
-#         # 【修复2】不要覆盖图像特征 h，仅赋值给 h2 用于路由
+#        
 #         h2 = h + context_out
 #         deg_logits = self.deg_gate(h2)
 
@@ -926,7 +926,7 @@ class MoEBlock(nn.Module):
 #         deg_mask = th.zeros_like(deg_logits)
 #         deg_mask.scatter_(1, topk_deg_idx, 1.0)
 
-#         # 【修复3】正确的 Softmax 掩码处理：将未选中的位置填充为 -inf
+#         
 #         gate_logits = deg_logits.masked_fill(deg_mask == 0, float('-inf'))
 #         gate = th.softmax(gate_logits, dim=1)
 #         gate = gate + 1e-6
@@ -935,7 +935,7 @@ class MoEBlock(nn.Module):
 
 #         expert_outputs = []
 
-#         # 注意这里使用的是原始的图像特征 h，而不是 context_out
+#         
 #         for expert in self.experts:
 #             out = expert(h) 
 #             expert_outputs.append(out)
@@ -946,7 +946,7 @@ class MoEBlock(nn.Module):
 
 #         gate = gate.unsqueeze(2)
 
-#         # 将加权求和后的特征重新赋值给 h，继续后续的残差连接
+#         
 #         h = (expert_outputs * gate).sum(dim=1)
 
 #         # ---------------- Residual ----------------
@@ -987,7 +987,7 @@ class MoEBlock(nn.Module):
     #     while len(emb_out.shape) < len(h.shape):
     #         emb_out = emb_out[..., None]
 
-    #     # ---------- 把 context 弄到和 h 一样的维度 ----------
+    #     # 
     #     if context is not None:
 
     #         B, C, H, W = h.shape
@@ -995,10 +995,10 @@ class MoEBlock(nn.Module):
     #         # 1. 展平 token 维度 [B, 77, 1024] -> [B, 77*1024]
     #         context_flat = context.reshape(context.shape[0], -1)
 
-    #         # 2. 映射到通道数
+    #         # 
     #         context_out = self.context_layers(context_flat).type(h.dtype)  # [B, C]
 
-    #         # 3. 补空间维度
+    #         # 
     #         while len(context_out.shape) < len(h.shape):
     #             context_out = context_out[..., None]
 
@@ -1023,7 +1023,7 @@ class MoEBlock(nn.Module):
 
     #     # ---------- Step2 Degradation Routing ----------
 
-    #     # 将原来的 deg_gate(context) 修改为使用我们映射和对齐形状后的 context_out (修改后的代码)
+    #   
     #     h2 = h + context_out
     #     deg_logits = self.deg_gate(h2)
 
