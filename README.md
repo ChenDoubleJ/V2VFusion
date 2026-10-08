@@ -59,7 +59,7 @@ sudo apt-get install ffmpeg libsm6 libxext6 -y
 
 Download the required checkpoints and place them under `pretrained_weight/`.
 
-- Model weight: download from [model.safetensors](https://huggingface.co/Chendoublej/V2VFusion/resolve/main/model.safetensors?download=true).
+- Model weight: download from [Huggingface-V2VFusion](https://huggingface.co/Chendoublej/V2VFusion/resolve/main/model.safetensors?download=true).
 - VAE: download from [stable-video-diffusion-img2vid](https://huggingface.co/stabilityai/stable-video-diffusion-img2vid).
 - CLIP-ViT text encoder: download from [CLIP-ViT-H-14-laion2B-s32B-b79K](https://huggingface.co/laion/CLIP-ViT-H-14-laion2B-s32B-b79K).
 
