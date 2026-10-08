@@ -110,3 +110,11 @@ Run the inference script:
 ```bash
 bash video_fusion/scripts/inference.sh
 ```
+
+Pay attention to the data and model weight paths:
+
+```text
+--input_path dataset/.../visible-infrared 
+
+--model_path ./model.safetensors
+```
