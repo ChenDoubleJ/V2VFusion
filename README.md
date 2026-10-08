@@ -59,7 +59,7 @@ sudo apt-get install ffmpeg libsm6 libxext6 -y
 
 Download the required checkpoints and place them under `pretrained_weight/`.
 
-- Model weight: to be released.
+- Model weight: download from [model.safetensors](https://huggingface.co/Chendoublej/V2VFusion/resolve/main/model.safetensors?download=true).
 - VAE: download from [stable-video-diffusion-img2vid](https://huggingface.co/stabilityai/stable-video-diffusion-img2vid).
 - CLIP-ViT text encoder: download from [CLIP-ViT-H-14-laion2B-s32B-b79K](https://huggingface.co/laion/CLIP-ViT-H-14-laion2B-s32B-b79K).
 
@@ -67,12 +67,12 @@ The expected layout is:
 
 ```text
 pretrained_weight/
-|-- model_weight/
+|-- model_weight/model.safetensors
 |-- stable-video-diffusion-img2vid/
 `-- CLIP-ViT-H-14-laion2B-s32B-b79K/
 ```
 
-`model_weight/` is left as a placeholder for now. The download link will be added after the model weights are organized. (**The model weights are a bit large, and it will take some time to upload. We need to wait for a few days...**)
+
 
 ### **Step 2: Prepare Testing Data**
 
